@@ -7,10 +7,14 @@ if [ -z "$PROCESSING_CORES" ]; then
     exit 1
 fi
 
+# Move to project directory
+
+cd /project
+
+sh /project/Allrun
+
 # Update cores in system/decomposeParDict
 sed -i "s/\(numberOfSubdomains  \)[0-9]*;/\1${PROCESSING_CORES};/" system/decomposeParDict
-
-./Allrun
 
 decomposePar
 
