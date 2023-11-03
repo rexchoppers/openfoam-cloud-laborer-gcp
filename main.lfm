@@ -1,7 +1,7 @@
 object MainForm: TMainForm
-  Left = 412
+  Left = 599
   Height = 474
-  Top = 216
+  Top = 280
   Width = 609
   BorderStyle = bsSingle
   Caption = 'Main Form'
@@ -9,6 +9,24 @@ object MainForm: TMainForm
   ClientWidth = 609
   OnCreate = FormCreate
   LCLVersion = '2.2.6.0'
+  object GroupBox2: TGroupBox
+    Left = 312
+    Height = 329
+    Top = 72
+    Width = 281
+    Caption = 'Logs'
+    ClientHeight = 302
+    ClientWidth = 271
+    TabOrder = 5
+    object Button2: TButton
+      Left = 8
+      Height = 25
+      Top = 272
+      Width = 75
+      Caption = 'Copy 📋'
+      TabOrder = 0
+    end
+  end
   object GroupBox1: TGroupBox
     Left = 16
     Height = 328
@@ -105,6 +123,25 @@ object MainForm: TMainForm
     Width = 617
     Caption = 'OpenFoam - Cloud Laborer - GCP '
     TabOrder = 2
+  end
+  object Memo1: TMemo
+    Left = 320
+    Height = 264
+    Top = 96
+    Width = 262
+    Lines.Strings = (
+      'Memo1'
+    )
+    TabOrder = 4
+  end
+  object Button4: TButton
+    Left = 408
+    Height = 25
+    Top = 368
+    Width = 75
+    Caption = 'Clear 🧹'
+    OnClick = Button4Click
+    TabOrder = 6
   end
   object SelectDirectoryDialog1: TSelectDirectoryDialog
     Left = 8

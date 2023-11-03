@@ -13,17 +13,22 @@ type
 
   TMainForm = class(TForm)
     Button1: TButton;
+    Button2: TButton;
+    Button4: TButton;
     ButtonRun: TButton;
     Button3: TButton;
     ButtonSelectFolder: TButton;
     EditFolder: TEdit;
     EditKeyfile: TEdit;
     GroupBox1: TGroupBox;
+    GroupBox2: TGroupBox;
     Label1: TLabel;
     Label2: TLabel;
+    Memo1: TMemo;
     Panel1: TPanel;
     Panel2: TPanel;
     SelectDirectoryDialog1: TSelectDirectoryDialog;
+    procedure Button4Click(Sender: TObject);
     procedure ButtonRunClick(Sender: TObject);
     procedure ButtonSelectFolderClick(Sender: TObject);
     procedure EditFolderChange(Sender: TObject);
@@ -79,6 +84,11 @@ begin
        MessageDlg('Error', 'Please select a keyfile', mtError, [mbOK], 0);
        Exit;
      end;
+end;
+
+procedure TMainForm.Button4Click(Sender: TObject);
+begin
+
 end;
 
 procedure TMainForm.EditFolderChange(Sender: TObject);
