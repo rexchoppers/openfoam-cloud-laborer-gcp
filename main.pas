@@ -12,6 +12,9 @@ type
   { TMainForm }
 
   TMainForm = class(TForm)
+    Button1: TButton;
+    Button2: TButton;
+    Button3: TButton;
     ButtonSelectFolder: TButton;
     Edit1: TEdit;
     GroupBox1: TGroupBox;
