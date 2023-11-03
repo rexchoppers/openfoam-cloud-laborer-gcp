@@ -5,7 +5,8 @@ unit main;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
+  Menus, ActnList;
 
 type
 
@@ -18,12 +19,14 @@ type
     ButtonRun: TButton;
     Button3: TButton;
     ButtonSelectFolder: TButton;
+    ComboBox1: TComboBox;
     EditFolder: TEdit;
     EditKeyfile: TEdit;
     GroupBox1: TGroupBox;
     GroupBox2: TGroupBox;
     Label1: TLabel;
     Label2: TLabel;
+    Label3: TLabel;
     Memo1: TMemo;
     Panel1: TPanel;
     Panel2: TPanel;
@@ -34,6 +37,7 @@ type
     procedure EditFolderChange(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure GroupBox1Click(Sender: TObject);
+    procedure Label3Click(Sender: TObject);
     procedure LabelSelectFileClick(Sender: TObject);
     procedure LabelTitleClick(Sender: TObject);
   private
@@ -57,6 +61,11 @@ begin
 end;
 
 procedure TMainForm.GroupBox1Click(Sender: TObject);
+begin
+
+end;
+
+procedure TMainForm.Label3Click(Sender: TObject);
 begin
 
 end;

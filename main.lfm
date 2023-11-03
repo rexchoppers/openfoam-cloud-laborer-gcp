@@ -1,7 +1,7 @@
 object MainForm: TMainForm
-  Left = 599
+  Left = 734
   Height = 474
-  Top = 280
+  Top = 336
   Width = 609
   BorderStyle = bsSingle
   Caption = 'Main Form'
@@ -9,24 +9,6 @@ object MainForm: TMainForm
   ClientWidth = 609
   OnCreate = FormCreate
   LCLVersion = '2.2.6.0'
-  object GroupBox2: TGroupBox
-    Left = 312
-    Height = 329
-    Top = 72
-    Width = 281
-    Caption = 'Logs'
-    ClientHeight = 302
-    ClientWidth = 271
-    TabOrder = 5
-    object Button2: TButton
-      Left = 8
-      Height = 25
-      Top = 272
-      Width = 75
-      Caption = 'Copy 📋'
-      TabOrder = 0
-    end
-  end
   object GroupBox1: TGroupBox
     Left = 16
     Height = 328
@@ -68,6 +50,39 @@ object MainForm: TMainForm
       Width = 192
       Enabled = False
       TabOrder = 1
+    end
+    object ComboBox1: TComboBox
+      Left = 64
+      Height = 20
+      Top = 72
+      Width = 192
+      ItemHeight = 26
+      ItemIndex = 0
+      Items.Strings = (
+        'Cloud Build'
+        'Docker'
+      )
+      Style = csDropDownList
+      TabOrder = 2
+      Text = 'Cloud Build'
+    end
+  end
+  object GroupBox2: TGroupBox
+    Left = 312
+    Height = 329
+    Top = 72
+    Width = 281
+    Caption = 'Logs'
+    ClientHeight = 302
+    ClientWidth = 271
+    TabOrder = 5
+    object Button2: TButton
+      Left = 8
+      Height = 25
+      Top = 272
+      Width = 75
+      Caption = 'Copy 📋'
+      TabOrder = 0
     end
   end
   object Panel1: TPanel
@@ -142,6 +157,15 @@ object MainForm: TMainForm
     Caption = 'Clear 🧹'
     OnClick = Button4Click
     TabOrder = 6
+  end
+  object Label3: TLabel
+    Left = 32
+    Height = 32
+    Top = 160
+    Width = 34
+    Caption = 'Build '#10'Sys'
+    ParentColor = False
+    OnClick = Label3Click
   end
   object SelectDirectoryDialog1: TSelectDirectoryDialog
     Left = 8
