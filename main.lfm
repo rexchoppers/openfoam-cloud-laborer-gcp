@@ -1,7 +1,7 @@
 object MainForm: TMainForm
-  Left = 638
+  Left = 447
   Height = 474
-  Top = 369
+  Top = 193
   Width = 609
   BorderStyle = bsSingle
   Caption = 'Main Form'
@@ -13,10 +13,10 @@ object MainForm: TMainForm
     Left = 16
     Height = 328
     Top = 72
-    Width = 248
+    Width = 280
     Caption = 'Project Information'
     ClientHeight = 301
-    ClientWidth = 238
+    ClientWidth = 270
     TabOrder = 3
     OnClick = GroupBox1Click
     object Label1: TLabel
@@ -27,14 +27,29 @@ object MainForm: TMainForm
       Caption = 'Folder'
       ParentColor = False
     end
-    object Edit1: TEdit
-      Left = 56
+    object EditFolder: TEdit
+      Left = 64
       Height = 22
       Top = 2
-      Width = 176
-      Enabled = False
-      OnChange = Edit1Change
+      Width = 192
+      OnChange = EditFolderChange
       TabOrder = 0
+    end
+    object Label2: TLabel
+      Left = 8
+      Height = 16
+      Top = 40
+      Width = 41
+      Caption = 'Keyfile'
+      ParentColor = False
+    end
+    object EditKeyfile: TEdit
+      Left = 64
+      Height = 22
+      Top = 34
+      Width = 192
+      Enabled = False
+      TabOrder = 1
     end
   end
   object Panel1: TPanel
@@ -53,7 +68,7 @@ object MainForm: TMainForm
       Caption = 'Select GCP Keyfile'
       TabOrder = 0
     end
-    object Button2: TButton
+    object ButtonRun: TButton
       Left = 432
       Height = 25
       Top = 16
@@ -61,6 +76,7 @@ object MainForm: TMainForm
       Caption = 'Run ✅'
       Color = clGreen
       Font.Color = 63744
+      OnClick = ButtonRunClick
       ParentFont = False
       TabOrder = 1
     end

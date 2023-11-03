@@ -13,17 +13,20 @@ type
 
   TMainForm = class(TForm)
     Button1: TButton;
-    Button2: TButton;
+    ButtonRun: TButton;
     Button3: TButton;
     ButtonSelectFolder: TButton;
-    Edit1: TEdit;
+    EditFolder: TEdit;
+    EditKeyfile: TEdit;
     GroupBox1: TGroupBox;
     Label1: TLabel;
+    Label2: TLabel;
     Panel1: TPanel;
     Panel2: TPanel;
     SelectDirectoryDialog1: TSelectDirectoryDialog;
+    procedure ButtonRunClick(Sender: TObject);
     procedure ButtonSelectFolderClick(Sender: TObject);
-    procedure Edit1Change(Sender: TObject);
+    procedure EditFolderChange(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure GroupBox1Click(Sender: TObject);
     procedure LabelSelectFileClick(Sender: TObject);
@@ -58,7 +61,12 @@ begin
 
 end;
 
-procedure TMainForm.Edit1Change(Sender: TObject);
+procedure TMainForm.ButtonRunClick(Sender: TObject);
+begin
+
+end;
+
+procedure TMainForm.EditFolderChange(Sender: TObject);
 begin
 
 end;
