@@ -70,12 +70,14 @@ begin
   if FolderInput = '' then
      begin
        MessageDlg('Error', 'Please select a folder', mtError, [mbOK], 0);
+       Exit;
      end;
 
   KeyfileInput := Trim(EditKeyfile.Text);
   if KeyfileInput = '' then
      begin
        MessageDlg('Error', 'Please select a keyfile', mtError, [mbOK], 0);
+       Exit;
      end;
 end;
 
