@@ -5,7 +5,7 @@ unit main;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls;
 
 type
 
@@ -14,6 +14,7 @@ type
   TMainForm = class(TForm)
     ButtonSelectFolder: TButton;
     LabelTitle: TLabel;
+    Panel1: TPanel;
     SelectDirectoryDialog1: TSelectDirectoryDialog;
     procedure ButtonSelectFolderClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);

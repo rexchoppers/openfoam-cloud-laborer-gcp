@@ -1,7 +1,7 @@
 object MainForm: TMainForm
-  Left = 312
+  Left = 388
   Height = 474
-  Top = 332
+  Top = 364
   Width = 609
   BorderStyle = bsSingle
   Caption = 'Main Form'
@@ -9,6 +9,13 @@ object MainForm: TMainForm
   ClientWidth = 609
   OnCreate = FormCreate
   LCLVersion = '2.2.6.0'
+  object Panel1: TPanel
+    Left = 0
+    Height = 58
+    Top = 416
+    Width = 610
+    TabOrder = 1
+  end
   object LabelTitle: TLabel
     Left = 201
     Height = 16
@@ -19,9 +26,9 @@ object MainForm: TMainForm
     OnClick = LabelTitleClick
   end
   object ButtonSelectFolder: TButton
-    Left = 40
+    Left = 16
     Height = 25
-    Top = 88
+    Top = 432
     Width = 104
     Caption = 'Select Folder'
     OnClick = ButtonSelectFolderClick
