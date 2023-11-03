@@ -1,7 +1,7 @@
 object MainForm: TMainForm
-  Left = 388
+  Left = 392
   Height = 474
-  Top = 364
+  Top = 272
   Width = 609
   BorderStyle = bsSingle
   Caption = 'Main Form'
@@ -9,21 +9,40 @@ object MainForm: TMainForm
   ClientWidth = 609
   OnCreate = FormCreate
   LCLVersion = '2.2.6.0'
+  object GroupBox1: TGroupBox
+    Left = 16
+    Height = 328
+    Top = 72
+    Width = 248
+    Caption = 'Project Information'
+    ClientHeight = 301
+    ClientWidth = 238
+    TabOrder = 3
+    OnClick = GroupBox1Click
+    object Label1: TLabel
+      Left = 8
+      Height = 16
+      Top = 8
+      Width = 38
+      Caption = 'Folder'
+      ParentColor = False
+    end
+    object Edit1: TEdit
+      Left = 56
+      Height = 22
+      Top = 2
+      Width = 176
+      OnChange = Edit1Change
+      TabOrder = 0
+      Text = 'Edit1'
+    end
+  end
   object Panel1: TPanel
     Left = 0
     Height = 58
     Top = 416
     Width = 610
     TabOrder = 1
-  end
-  object LabelTitle: TLabel
-    Left = 201
-    Height = 16
-    Top = 32
-    Width = 209
-    Caption = 'OpenFoam - Cloud Laborer - GCP '
-    ParentColor = False
-    OnClick = LabelTitleClick
   end
   object ButtonSelectFolder: TButton
     Left = 16
@@ -34,8 +53,16 @@ object MainForm: TMainForm
     OnClick = ButtonSelectFolderClick
     TabOrder = 0
   end
+  object Panel2: TPanel
+    Left = -8
+    Height = 56
+    Top = 0
+    Width = 617
+    Caption = 'OpenFoam - Cloud Laborer - GCP '
+    TabOrder = 2
+  end
   object SelectDirectoryDialog1: TSelectDirectoryDialog
-    Left = 520
-    Top = 8
+    Left = 568
+    Top = 432
   end
 end
