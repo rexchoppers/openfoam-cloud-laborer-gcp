@@ -62,8 +62,21 @@ begin
 end;
 
 procedure TMainForm.ButtonRunClick(Sender: TObject);
+var
+  FolderInput: string;
+  KeyfileInput: string;
 begin
+  FolderInput := Trim(EditFolder.Text);
+  if FolderInput = '' then
+     begin
+       MessageDlg('Error', 'Please select a folder', mtError, [mbOK], 0);
+     end;
 
+  KeyfileInput := Trim(EditKeyfile.Text);
+  if KeyfileInput = '' then
+     begin
+       MessageDlg('Error', 'Please select a keyfile', mtError, [mbOK], 0);
+     end;
 end;
 
 procedure TMainForm.EditFolderChange(Sender: TObject);
