@@ -13,7 +13,7 @@ type
   { TMainForm }
 
   TMainForm = class(TForm)
-    Button1: TButton;
+    ButtonSelectGCPKeyfile: TButton;
     Button2: TButton;
     Button4: TButton;
     ButtonRun: TButton;
@@ -28,9 +28,10 @@ type
     Label2: TLabel;
     Label3: TLabel;
     MemoLog: TMemo;
+    OpenDialog1: TOpenDialog;
     Panel1: TPanel;
     Panel2: TPanel;
-    SelectDirectoryDialog1: TSelectDirectoryDialog;
+    SelectDirectoryDialogFolder: TSelectDirectoryDialog;
     procedure Button4Click(Sender: TObject);
     procedure ButtonRunClick(Sender: TObject);
     procedure ButtonSelectFolderClick(Sender: TObject);
@@ -80,10 +81,19 @@ begin
 
 end;
 
+(*
+  The "Select Folder" button to handle when a user selects the project
+  directory to push up to the cloud
+*)
 procedure TMainForm.ButtonSelectFolderClick(Sender: TObject);
 begin
-
+     if SelectDirectoryDialogFolder.Execute then
+        begin
+          EditFolder.Text := SelectDirectoryDialogFolder.FileName;
+        end;
 end;
+
+
 
 (*
   This is the main section for the Run button.
@@ -110,6 +120,8 @@ begin
        Exit;
      end;
 end;
+
+
 
 procedure TMainForm.Button4Click(Sender: TObject);
 begin

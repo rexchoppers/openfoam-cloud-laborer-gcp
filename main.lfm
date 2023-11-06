@@ -1,7 +1,7 @@
 object MainForm: TMainForm
-  Left = 565
+  Left = 476
   Height = 474
-  Top = 282
+  Top = 391
   Width = 609
   BorderStyle = bsSingle
   Caption = 'Main Form'
@@ -95,7 +95,7 @@ object MainForm: TMainForm
     ClientHeight = 58
     ClientWidth = 610
     TabOrder = 1
-    object Button1: TButton
+    object ButtonSelectGCPKeyfile: TButton
       Left = 128
       Height = 25
       Top = 16
@@ -168,8 +168,14 @@ object MainForm: TMainForm
     ParentColor = False
     OnClick = Label3Click
   end
-  object SelectDirectoryDialog1: TSelectDirectoryDialog
-    Left = 8
-    Top = 464
+  object SelectDirectoryDialogFolder: TSelectDirectoryDialog
+    FileName = '/Users/brady/Projects/openfoam-cloud-laborer-gcp/backup'
+    InitialDir = '/Users/brady/Projects/openfoam-cloud-laborer-gcp/'
+    Left = 568
+    Top = 16
+  end
+  object OpenDialog1: TOpenDialog
+    Left = 440
+    Top = 16
   end
 end
