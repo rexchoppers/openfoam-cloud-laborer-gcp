@@ -28,13 +28,14 @@ type
     Label2: TLabel;
     Label3: TLabel;
     MemoLog: TMemo;
-    OpenDialog1: TOpenDialog;
+    SelectGCPKeyfileDialog: TOpenDialog;
     Panel1: TPanel;
     Panel2: TPanel;
     SelectDirectoryDialogFolder: TSelectDirectoryDialog;
     procedure Button4Click(Sender: TObject);
     procedure ButtonRunClick(Sender: TObject);
     procedure ButtonSelectFolderClick(Sender: TObject);
+    procedure ButtonSelectGCPKeyfileClick(Sender: TObject);
     procedure EditFolderChange(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure GroupBox1Click(Sender: TObject);
@@ -93,7 +94,17 @@ begin
         end;
 end;
 
-
+(*
+  The "Select GCP Keyfile" button to handle when a user selects
+  their GCP keyfile
+*)
+procedure TMainForm.ButtonSelectGCPKeyfileClick(Sender: TObject);
+begin
+     if SelectGCPKeyfileDialog.Execute then
+        begin
+          EditKeyfile.Text := SelectGCPKeyfileDialog.FileName;
+        end;
+end;
 
 (*
   This is the main section for the Run button.
