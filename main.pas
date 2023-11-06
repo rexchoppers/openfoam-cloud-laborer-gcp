@@ -85,6 +85,12 @@ begin
 
 end;
 
+(*
+  This is the main section for the Run button.
+
+  1. Validate the inputs and make sure they've been selected
+  2. Authorise with Google (Using GCP Keyfile)
+*)
 procedure TMainForm.ButtonRunClick(Sender: TObject);
 var
   FolderInput: string;

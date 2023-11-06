@@ -1,7 +1,7 @@
 object MainForm: TMainForm
-  Left = 663
+  Left = 565
   Height = 474
-  Top = 278
+  Top = 282
   Width = 609
   BorderStyle = bsSingle
   Caption = 'Main Form'
@@ -33,6 +33,7 @@ object MainForm: TMainForm
       Top = 2
       Width = 192
       OnChange = EditFolderChange
+      ReadOnly = True
       TabOrder = 0
     end
     object Label2: TLabel
@@ -49,6 +50,7 @@ object MainForm: TMainForm
       Top = 34
       Width = 192
       Enabled = False
+      ReadOnly = True
       TabOrder = 1
     end
     object ComboBox1: TComboBox
