@@ -1,7 +1,7 @@
 object MainForm: TMainForm
-  Left = 734
+  Left = 684
   Height = 474
-  Top = 336
+  Top = 239
   Width = 609
   BorderStyle = bsSingle
   Caption = 'Main Form'
@@ -147,6 +147,7 @@ object MainForm: TMainForm
     Lines.Strings = (
       'Memo1'
     )
+    ReadOnly = True
     TabOrder = 4
   end
   object Button4: TButton
