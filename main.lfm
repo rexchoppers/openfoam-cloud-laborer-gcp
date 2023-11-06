@@ -1,7 +1,7 @@
 object MainForm: TMainForm
-  Left = 684
+  Left = 663
   Height = 474
-  Top = 239
+  Top = 278
   Width = 609
   BorderStyle = bsSingle
   Caption = 'Main Form'
@@ -139,15 +139,13 @@ object MainForm: TMainForm
     Caption = 'OpenFoam - Cloud Laborer - GCP '
     TabOrder = 2
   end
-  object Memo1: TMemo
+  object MemoLog: TMemo
     Left = 320
     Height = 264
     Top = 96
     Width = 262
-    Lines.Strings = (
-      'Memo1'
-    )
     ReadOnly = True
+    ScrollBars = ssVertical
     TabOrder = 4
   end
   object Button4: TButton

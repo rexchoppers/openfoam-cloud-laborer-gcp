@@ -27,7 +27,7 @@ type
     Label1: TLabel;
     Label2: TLabel;
     Label3: TLabel;
-    Memo1: TMemo;
+    MemoLog: TMemo;
     Panel1: TPanel;
     Panel2: TPanel;
     SelectDirectoryDialog1: TSelectDirectoryDialog;
@@ -54,6 +54,16 @@ implementation
 {$R *.lfm}
 
 { TMainForm }
+
+procedure LogMessage(AMemo: TMemo; const AMessage: string);
+begin
+  if Assigned(AMemo) then
+  begin
+    AMemo.Lines.Add(AMessage);
+    // Auto-scroll to the bottom
+    AMemo.CaretPos := Point(0, AMemo.Lines.Count);
+  end;
+end;
 
 procedure TMainForm.FormCreate(Sender: TObject);
 begin
