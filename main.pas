@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
-  Menus, ActnList;
+  Menus, ActnList, fpJson, jsonparser;
 
 type
 
@@ -67,6 +67,10 @@ begin
   end;
 end;
 
+(*
+  This procedure is called when the form is created. This can be used
+  for application init
+*)
 procedure TMainForm.FormCreate(Sender: TObject);
 begin
 
@@ -130,6 +134,8 @@ begin
        MessageDlg('Error', 'Please select a keyfile', mtError, [mbOK], 0);
        Exit;
      end;
+
+
 end;
 
 
